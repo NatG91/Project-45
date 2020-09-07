@@ -7,10 +7,57 @@ var maze1,maze2,maze3,maze4,maze5,maz6,maze7
 ,maze8,maze9,maze10,maze11,maze12,maze13,maze14,
 maze15,maze16,maze17,maze18,maze19,maze20
 
+var AlmondImg,AppleImg,BroccoliImg,CarrotImg,CheeseImg,ChickenImg,EggImg,Egg2Image,GuavaImg,MangoImg,MilkImg,Milk2Img,Milk3Img;
+var MushroomImg,OrangeJuiceImg,PeanutsImg,StrawberryImg,TunaImg,TheNutrientTestImg;
+
+function preload(){
+
+//loading the images
+
+almondImg=loadImage("Images/Almonds.png");
+appleImg=loadImage("Images/Apple.png");
+broccoliImg=loadImage("Images/Broccoli.png");
+peanutsImg=loadImage("Images/Peanuts.png");
+strawberryImg=loadImage("Images/Strawberry.png");
+chickenImg=loadImage("Images/Chicken.png");
+eggImg=loadImage("Images/Egg.png");
+// carrotImg.loadImage("Images/Carrot.png");
+// cheeseImg.loadImage("Images/Cheese.png");
+// egg2Img.loadImage("Images/Egg2.png");
+// guavaImg.loadImage("Images/Guava.png");
+// milkImg.loadImage("Images/Milk.png");
+// // milk2Img.loadImage("Images/Milk2.png");
+// milk3Img.loadImage("Images/Milk3.png");
+// mushroomImg.loadImage("Images/Mushroom.png");
+// orangejuiceImg.loadImage("Images/Orange Juice.png");
+// tunaImg.loadImage("Images/Tuna.png");
+
+}
 
 function setup(){
 
 createCanvas(1600,800);
+
+AlmondImg=createSprite(700,500,30,30);
+AlmondImg.addImage(almondImg);
+
+AppleImg=createSprite(700,500,30,30);
+AppleImg.addImage(appleImg);
+
+BroccoliImg=createSprite(700,500,30,30);
+BroccoliImg.addImage(broccoliImg);
+
+PeanutsImg=createSprite(700,500,30,30);
+PeanutsImg.addImage(peanutsImg);
+
+StrawberryImg=createSprite(700,500,30,30);
+StrawberryImg.addImage(strawberryImg);
+
+ChickenImg=createSprite(700,500,30,30);
+ChickenImg.addImage(chickenImg);
+
+EggImg=createSprite(700,500,30,30);
+EggImg.addImage(eggImg);
 
 engine = Engine.create();
 world = engine.world;
@@ -73,6 +120,8 @@ maze50= new Maze(315,760)
 
 function draw(){
 background("rgb(173,216,230)")
+
+Engine.update(engine)
 
 //maze1.display();
 maze2.display();
